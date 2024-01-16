@@ -6,7 +6,8 @@ import { render } from 'vike/abort'
 
 const guard = async (pageContext) => {
   if (pageContext.locale == 'fr-FR') {
-    throw render('/about') // Works on full page reload but not client side as the locale is not known on the server
-    //throw render('/' + pageContext.locale + '/about') // URL /fr-FR/about doesn't match the route of any of your pages:
+    const url = '/' + pageContext.locale + '/about'
+    console.log(`throw render('${url}')`);
+    throw render(url)
   }
 }

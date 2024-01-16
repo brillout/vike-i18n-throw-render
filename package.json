@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "dev": "vite --port 3006",
+    "dev": "vite",
     "build": "vite build",
     "preview": "vite build && vite preview"
   },
